@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Rubic landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Rubic Landing page | Free Bootstrap 4.1 landing page</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Rubic main styles -->
+	<link rel="stylesheet" href="assets/css/rubic.css">
+    <script type="text/javascript" src="/eel.js"></script>
+
+
+
+    <script type="text/jscript">
+      //eel.expose(display); // Expose this function to Python
+        /*function display(result) {
+        document.getElementById("result_box").value=result;
+        alert("Predicted successfully!");
+    }*/
+	function sleep(time){
+	 var timeStamp = new Date().getTime();
+	 var endTime = timeStamp + time;
+	 while(true){
+	 if (new Date().getTime() > endTime){
+	  return;
+	 } 
+	 }
+	}
+    async function compute(){
+        //eel.expose(system_sends_message2);
+        alert("Start prediction!");
+        //alert(toString(eel));
+        document.getElementById("result_box").value="Waiting......";
+        //const result=await eel.test();
+        let result=await eel.python_compute(document.getElementById("text_box").value)();
+        //const reader = new FileReader();
+        //reader.readAsText(file);
+		sleep(2000);
+        document.getElementById("result_box").value=result;
+        alert("Predicted successfully!");
+    }
+    </script>
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home"> 
+    <nav id="scrollspy" class="navbar page-navbar navbar-dark navbar-expand-md fixed-top" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong class="text-primary">A</strong><span class="text-light">pollo</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">System</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Experiments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Future</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#review">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#download">Download</a>
+                    </li>
+                    <!--<li class="nav-item">
+                        <a class="nav-link" href="#contact">Run</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-dark shadow-none ml-md-4" href="components.html">Components</a>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="header d-flex justify-content-center">
+        <div class="container">
+            <div class="row h-100 align-items-center">
+                <div class="col-md-7">
+                    <div class="header-content">
+                        <h3 class="header-title"><strong class="text-primary">A</strong><span class="text-light">pollo</span></h3>
+                        <h4 class="header-subtitle">Few-shot Text Classification System Construction and Validation</h4>
+                        <p>Few-shot text classification (FTC) enables training accurate text classification models with limited number of labeled text. We establish a FTC system based on Domain-Tuning to learn the data distribution for this downstream task, achieving superior performance than the state-of-the-art.
+                            Let's explore the FTC system built by group Apollo!</p>
+                            <a href="#features" color="white"><button class="btn btn-outline-light btn-flat">Get Started</button></a>
+                    </div>  
+                </div>
+                <div class="col-md-5 d-none d-md-block">
+                    <form class="header-form">
+                        <div class="head">Share <span class="text-primary">Your</span> Suggestions</div>
+                        <div class="body">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name*">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email*">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Content*">
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <button class="btn btn-primary btn-block">Submit and Get Started</button>
+                        </div>
+                    </form> 
+                </div>
+            </div>  
+        </div>
+    </header>
+    <div class="social-wrapper" id="features">
+        <div class="container">
+            <div class="social-txt">
+                <h6 class="title">Social Media</h6>
+                <p class="subtitle">Share with your friends and make contributions to our FTC system!</p>
+            </div>
+            <div class="social-links">
+                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
+            </div>
+        </div>          
+    </div>
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-lg-8">
+                    <div class="tabs-container">
+                        <ul class="nav tab-nav" id="pills-tab">
+                            <li class="item">
+                                <a class="link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"aria-selected="true">Problem</a>
+                            </li>
+                            <li class="item">
+                                <a class="link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"aria-selected="false">Benchmarks</a>
+                            </li>
+                            <li class="item">
+                                <a class="link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact"aria-selected="false">Dataset</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="pills-home">
+                                <h4 class="title">Problem Background</h4>
+                                <p>Innovation is an inexhaustible driving force for national development and national rejuvenation. In recent years, with the improvement of policy support, national industrialization level and national education level, the number of patent applications in my country has grown rapidly, and the demand for patent search, novelty search and management has also continued to increase. In order to meet the above requirements and improve the quality of patent services, it is usually necessary to establish a multi-dimensional patent classification system. Common classification systems include the International Patent Classification (IPC), the Combined Patent Classification (CPC), the European Patent Classification (ECLA), etc., but these classification systems are relatively complex and highly specialized, and it is difficult for non-IP personnel to use them. Wisdom Buds, as the world's leading intellectual property SaaS platform, has developed a new patent classification system based on users' search habits and other factors, so as to improve the user experience.
+                                   
+                                 <!--<button class="btn btn-primary mt-3">Download</button>-->
+                            </div>
+                            <div class="tab-pane fade" id="pills-profile">
+                                <h4 class="title">Compared State-of-the-art</h4>
+                                <p>The competition party disclosed 958 pieces of patent data, including the patentee, patent title, patent abstract and classification labels, among which the classification labels have been desensitized, and there are 36 categories in total. The contestants are required to design a set of algorithms to complete the classification task of the test data.
+                                    The amount of training data published in this competition is relatively small, which belongs to the classification task based on small sample training data. Small-sample classification tasks have been a hot research topic in recent years. The academic community has proposed solutions such as remote supervision, data enhancement, pre-training models, and PET paradigms. It is hoped that the contestants will give full play to their creativity and apply the research results of the academic circles to this competition topic.</p>
+                            </div>
+                            <div class="tab-pane fade" id="pills-contact">
+                                <h4 class="title">Datasets</h4>
+                                <p>The datasets origins from the CCF Big Data \& Computing Intelligence Contest\cite{CCF-dataset}, which includes one training dataset and two test datasets.
+                                    The organizer of the contest disclosed 958 pieces of patent data, including the patentee, patent title, patent abstract and classification labels, among which the classification labels have been desensitized, and there are 36 categories in total. The contestants are required to design a set of algorithms to complete the classification task of the test data.
+                                    The amount of training data published is relatively small, which belongs to the classification task based on small sample training data. Small-sample classification tasks have been a hot research topic in recent years. The academic community has proposed solutions such as remote supervision, data enhancement, pre-training models, and PET paradigms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block align-self-center">
+                    <img src="assets/imgs/eiffel-tower.svg" alt="" class="w-100 tower">
+                </div>
+            </div>                  
+        </div>                      
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-5 align-self-center mb-4 mb-md-0">
+                    <img src="assets/imgs/img.jpg" alt="" class="shadow w-100">
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <h6 class="title">System Overview</h6>
+                    <p>Referencing to the BERT, randomly mask a word with a 15% probability. Recent work argues that the next sentence task has little effect on model improvement, so we only use the masking task to retrain the model. By making full use of a small amount of labeled data and a large amount of unlabeled test data, the parameter space of BERT_D is more suitable for this downstream task.</p>
+                    <p>Following contents include:</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="media">
+                            <div class="circle-40 mr-3 mt-1"><i class="ti-gift"></i></div>
+                            <div class="media-body">
+                                <h6 class="mb-2">Model Implementation</h6>
+                                <p>Introduce implementation details of our system, including the backbone models, training techniques, computational platforms, etc.</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="circle-40 mr-3 mt-1"><i class="ti-face-smile"></i></div>
+                            <div class="media-body">
+                                <h6 class="mb-2">Data Augmentation</h6>
+                                <p>Introduce data augmentation strategy we adopted, including motivation, design principles and processing details.</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="circle-40 mr-3 mt-1"><i class="ti-microphone"></i></div>
+                            <div class="media-body">
+                                <h6 class="mb-2">Semantic Segmentation</h6>
+                                <p>Introduce the semantic segmentation method we applied for further improving model performance, and provide examples.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-between">               
+                <div class="col-md-6 col-lg-5 align-self-center">
+                    <h6 class="title">Model Implementation</h6>
+                    <p>In our implementation of PLMs, we choose the version "bert-base-chinese", "chinese-roberta-wwm-ext",based on Transformers for BERT, RoBERTa model, respectively.
+                        Due to hardware resource limitations, we only retrain the BERT(base) model with masking task, and use it on Domain-Tuning. For Fine-Tuning method, we select the larger model to classify. Specifically, we set batch size to be 12 instances for Fine-Tuning, 16 instances for Domain-Tuning. Dropout rate is set 0.5 for the representations of all models.  
+                        All models are implemented on Pytorch (version 1.11.0), and model parameters are randomly initialized.
+                        For the models with Fine-Tuing and Domain-Tuning,
+                        AdamW is used as optimizer, and we use 1e-5 as learning rate. 
+                        </p>                    
+                </div>
+                <div class="col-md-5 mt-4 mt-md-0">
+                    <img src="assets/imgs/img1.jpg" alt="" class="shadow w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-5 align-self-center mb-4 mb-md-0">
+                    <img src="assets/imgs/img3.jpg" alt="" class="shadow w-100">
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <h6 class="title">Data Augmentation</h6>
+                    <p>Due to the inadequate of training data, we adopt "Back translation" to increase the amount of our data, in order to rise the effectiveness. We used the machine translation API provided by Tencent company. The datasets are originally in Chinese, after translating every single row of data into five different kind of languages(which are English, Japanese, French, Russian, Malay) originated from different language families, we translate them back into Chinese. This procedure ensures the semanteme of the results are identical with primary data, and generates a slight discrepancy in the expression in the meanwhile. 
+                        Specifically, we only augmented the abstract of each row of data, taking Table 3 as examples.
+                    </p>
+                    <!--<ul class="list-unstyled mt-4">
+                        <li class="media">
+                            <div class="circle-40 mr-3 mt-1"><i class="ti-gift"></i></div>
+                            <div class="media-body">
+                                <h6 class="mb-2">List-based media object</h6>
+                                <p>Cras sit amet nibh libero, in gravida nulla.</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="circle-40 mr-3 mt-1"><i class="ti-face-smile"></i></div>
+                            <div class="media-body">
+                                <h6 class="mb-2">Another one</h6>
+                                <p>Cras in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="circle-40 mr-3 mt-1"><i class="ti-microphone"></i></div>
+                            <div class="media-body">
+                                <h6 class="mb-2">One more</h6>
+                                <p>Nulla vel metus scelerisque ante sollicitudin. Cras purus odio.</p>
+                            </div>
+                        </li>
+                    </ul>-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-between">               
+                <div class="col-md-6 col-lg-5 align-self-center">
+                    <h6 class="title">Semantic Segmentation</h6>
+                    <p>We assert that it is relatively difficult to classify the data if removing the last sentence of the abstract. Therefore, we divide the abstract of each piece of data into three parts: statement, program and effect.
+                        By disassembling this piece of data, we can put a greater weight on the effect part, making it stand out in a large piece of text, thereby improving the effectiveness of the information.
+                    </p>                    
+                </div>
+                <div class="col-md-5 mt-4 mt-md-0">
+                    <img src="assets/imgs/img4.jpg" alt="" class="shadow w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="pricing">
+        <div class="container text-center">
+            <h6 class="display-4 has-line">Experimental Results</h6>
+            <p class="mb-5 pb-4">
+                                
+                Taking early fine-tuned Bert as baseline, model performance has been greatly improved with domain-tuning. What's more, by making full use of a small amount of labeled data and a large amount of unlabeled test data, the parameter space of BERT\_D is more suitable for this downstream task. No need to generate more data with the same distribution as the annotated data, BERT_D has best performance without data enhancement, which is useless for BERT_D.
+                Besides, early explorations utilizing knowledge distillation combined with self-training outperforms fine-tuned Bert.</p>
+                <div class="row pt-5">
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="pricing-card">
+                        <div class="head">Fine-Tuning</div>
+                        <div class="body">
+                            <h1><small>↑</small>11.98</h1>
+                            <!--<p>Free for Life</p>-->
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">11.98% macro-F1 score improvement with back translation</li>
+                            <li class="list-group-item">10.87% macro-F1 score improvement with semantic segmentation</li>
+                            <li class="list-group-item">3.13% macro-F1 score improvement with back translation</li>
+                            <!--<li class="list-group-item">BASIC CUSTOMIZATION</li>
+                            <li class="list-group-item">WORDPRESS INTEGRATION</li>
+                            <li class="list-group-item">EMAIL SUPPORT</li>-->
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="pricing-card popular">
+                        <div class="head">Domain-Tuning</div>
+                        <div class="body">
+                            <h1><small>↑</small>17.36</h1>
+                            <p></p>
+                        </div>
+                        <div class="popular-item">OUR BEST RESULT</div>
+                        <ul class="list-group">
+                            <li class="list-group-item">17.36% macro-F1 score improvement without data enhancement</li>
+                            <li class="list-group-item">13.00% macro-F1 score improvement with semantic segmentation</li>
+                            <li class="list-group-item">11.72% macro-F1 score improvement with back translation</li>
+                            <!--<li class="list-group-item">ADVANCED CUSTOMIZATION</li>
+                            <li class="list-group-item">WORDPRESS INTEGRATION</li>
+                            <li class="list-group-item">EMAIL SUPPORT</li>-->
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="pricing-card">
+                        <div class="head">Self-Training</div>
+                        <div class="body">
+                            <h1><small>↑</small>1.77</h1>
+                            <!--<p>Monthly Payment</p>-->
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">17.36% macro-F1 score improvement with knowledge-driven random forests</li>
+                            <!--<li class="list-group-item">UNLIMITED BANDWIDTH</li>
+                            <li class="list-group-item">120 WEBSITES</li>
+                            <li class="list-group-item">ADVANCED CUSTOMIZATION</li>
+                            <li class="list-group-item">WORDPRESS INTEGRATION</li>
+                            <li class="list-group-item">EMAIL SUPPORT</li>-->
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="about">
+        <div class="container text-center">
+            <h6 class="display-4 has-line">Future Directions</h6>
+            <!--<p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="circle-100 mb-3"><i class="ti-light-bulb"></i></div>
+                    <h6 class="title mb-3">Data Enhancement</h6>
+                    <p>Strategies to find data enhancement methods that fit the problem characteristics and conform to the assumption space of models.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="circle-100 mb-3"><i class="ti-paint-bucket"></i></div>
+                    <h6 class="title mb-3">Domain Fine-tuning</h6>
+                    <p>Ways to balance the powerful semantic understanding of large models with domain fine-tuning time and resource constraints.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="circle-100 mb-3"><i class="ti-marker-alt"></i></div>
+                    <h6 class="title mb-3">Intersection</h6>
+                    <p>Broaden the intersection of few-shot text classification with other research areas, such as transfer learning, multi-modal learning, etc.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="review">
+        <div class="container text-center">
+            <h6 class="display-4 has-line">Our Team</h6>
+            <p class="mb-5 pb-4">Group members and work content.</p>
+            <div class="row text-left">
+                <div class="col-md-4">
+                    <div class="testmonial">                        
+                        <p class="description"><i>Responsible for the design and implementation of the overall system.</i></p>
+                        <div class="media">
+                            <img class="mr-3" src="assets/imgs/avatar1.jpg" width="60" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <h6 class="title">Hengran Zhang</h6>
+                                <p class="text-muted">System Implementation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testmonial">                        
+                        <p class="description"><i>Responsible for data augmentation and performing system formalization.</i></p>
+                        <div class="media">
+                            <img class="mr-3" src="assets/imgs/avatar2.jpg" width="60" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <h6 class="title">Wenxing Liu</h6>
+                                <p class="text-muted">Data Augmentation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testmonial">                        
+                        <p class="description"><i>Responsible for demo establishment and early exploration.</i></p>
+                        <div class="media">
+                            <img class="mr-3" src="assets/imgs/avatar3.jpg" width="60" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <h6 class="title">Zhiyuan Wu</h6>
+                                <p class="text-muted">Demo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </section>
+    <section class="section has-img-bg text-center" id="download">
+        <div class="container">
+            <h6 class="display-3 has-line">Supplement Materials</h6>
+            <h5 class="mb-5 font-weight-light">Our supplement materials have been uploaded to github. Press the button to download.</h5>
+            <a href="https://github.com/hengran/few-shot_text_classification"><button class="btn btn-outline-light btn-flat">Download</button></a>
+        </div>
+    </section>
+    <footer class="footer py-4 bg-dark text-light"> 
+        <div class="container text-center">
+            <p class="mb-4 small">Copyright <script>document.write(new Date().getFullYear())</script> &copy; Apollo all rights reserved</p>
+            <div class="social-links">
+                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
+            </div>
+        </div>
+    </footer>
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Rubic js -->
+    <script src="assets/js/rubic.js"></script>
+
+</body>
+</html>
